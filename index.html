@@ -1,0 +1,44 @@
+<!DOCTYPE html> <html>
+    <head>
+        
+        <script type="text/javascript" src="index2.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css"> 
+    <body id="body">
+        
+        <h1>
+            Pedidos
+        </h1> 
+      <div id = "dfPedido">
+                
+            <form action="/index.xls">  
+                <input type="text", name="pedido", placeholder="Insira o Produto">
+                <input list="status" name="status ", placeholder="Status">
+                <datalist id= "status" >
+                    <option value="Pedente"></option>
+                    <option value="Em Andamento"> </option>
+                    <option value="Fechado"></option>
+                    <option value="Cancelado"></option>
+                </datalist>               
+                <input type="text", name="comentarios", placeholder="Comentários">
+                <input type="submit" value="Adicionar Pedido" onclick="cadPedido(pedido.value, status.value, comentarios.value)"/>
+
+            </form>     
+        </div>
+        <div id="dtProdutos">
+            <table id="tbProdutos">
+                <thead>
+                    <tr>
+                        <td>Produto</td>
+                        <td>Status</td>
+                        <td>Comentários</td>
+                                                      
+                    </tr>  
+                </thead>
+            </table>
+        </div>
+    </body>
+    </head>
+</html>
